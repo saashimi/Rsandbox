@@ -1,0 +1,65 @@
+Basics
+======
+      v-------------------The assignment symbol
+test <- c(1,2,3,4)
+        ^-----------------c is for combine
+
+test is now a vector (aka list)
+test[1] returns [1] 1.  Indexing behavior is different!
+
+Reading a CSV:
+
+    v--------variable          v----filename            v------delimination character
+heisenberg <- read.csv(file="simple.csv",head=TRUE,sep=",")
+                  ^                         ^------first row are headings
+                  '---read csv command
+
+summary(heisenberg) will give us some summary statistics.
+
+dir() for directory contents
+getwd() to get current working directory
+names(heisenberg) to get what names are contained in the variable
+---   ---   ---
+Fixed-width file special case file handling
+a = read.fwf('fixedWidth.dat',widths=c(-17,15,7),col.names=c('temp','offices'))
+                                         ^---Negative num means column should
+                                             be skipped.
+-17, 15, 7 Means ignore column of 17 width, use columne of 15 width, etc.
+---   ---   ---
+
+Data types
+==========
+$ to specify a given column.
+ls() for a list of currently assigned variables.
+numeric() can be utilized to generate a list of numbers.
+typeof() can determine the data type.
+strings are character datatywpes. Hence character() to generate characters
+---   ---   ---
+Factors - "levels" of variables
+factor()
+
+Data frames
+===========
+Take many vectors of different types and store them in the same variable.
+> a <- c(1,2,3,4)
+> b <- c(2,4,6,8)
+> levels <- factor(c("A","B","A","B"))
+> bubba <- data.frame(first=a,
+                      second=b,
+                      f=levels)
+Logical
+=======
+logical types can contain the boolean TRUE or FALSE and include
+<, >, <=, >=, ==, !=
+| entry wise or (element-wise)
+||
+! not
+& entry wise and (element-wise)
+&&
+xor(a,b) exclusive or
+
+is.numeric() will return a boolean TRUE or FALSE
+
+Tables
+======
+One-way vs two way.
