@@ -1,3 +1,4 @@
+Adapted from Kelly Black's (Univ of Georgia Math Dept.) R Tutorial
 Basics
 ======
       v-------------------The assignment symbol
@@ -63,3 +64,32 @@ is.numeric() will return a boolean TRUE or FALSE
 Tables
 ======
 One-way vs two way.
+Two-way tables: Must first create a matrix of numbers
+> occur <- matrix(c(4,3,2),ncol=3,byrow=TRUE)
+> occur
+     [,1] [,2] [,3]
+[1,]    4    3    2
+
+occur is a matrix with one row and three columns of numbers. Convert it to a table:
+> colnames(occur) <- c("A","B","C")
+> occur
+     A B C
+[1,] 4 3 2
+> occur <- as.table(occur)
+> occur
+  A B C
+A 4 3 2
+> attributes(occur)
+$dim
+[1] 1 3
+
+$dimnames
+$dimnames[[1]]
+[1] "A"
+
+$dimnames[[2]]
+[1] "A" "B" "C"
+
+
+$class
+[1] "table"
