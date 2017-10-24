@@ -1,6 +1,11 @@
 Adapted from Kelly Black's (Univ of Georgia Math Dept.) R Tutorial
 Basics
 ======
+
+To run a file:
+soure("file.R")
+
+
       v-------------------The assignment symbol
 test <- c(1,2,3,4)
         ^-----------------c is for combine
