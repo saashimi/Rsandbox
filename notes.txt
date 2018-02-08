@@ -3,7 +3,7 @@ Basics
 ======
 
 To run a file:
-soure("file.R")
+source("file.R")
 
 
       v-------------------The assignment symbol
